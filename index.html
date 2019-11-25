@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AOV Welcome to Your Account!</title>
+    <link type="image/x-icon" rel="shortcut icon" href="https://dev2.academyofvoice.com/template_file/public_image/fc3/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="https://dev2.academyofvoice.com/template_file/css/fc4a-inner-css/font-and-style.css">
+    <link rel="stylesheet" type="text/css" href="https://dev2.academyofvoice.com/template_file/css/fc4a-inner-css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://dev2.academyofvoice.com/template_file/css/fc4a-inner-css/style-video-page.css?201910171646">
+    <link rel="stylesheet" type="text/css" href="https://dev2.academyofvoice.com/template_file/css/fc4a-inner-css/media_screen.css?201910171646">
+    <link rel="stylesheet" type="text/css" href="https://dev2.academyofvoice.com/template_file/css/fc4a-inner-css/voicessment.css?201910171646">
+    <link rel="stylesheet" type="text/css" href="https://dev2.academyofvoice.com/template_file/css/font-awesome/css/font-awesome.min.css" />
+
+    <style type="text/css">
+        .f2 {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        
+        #pitch-results,
+        #calculating-pitch-msg-div {
+            display: none;
+        }
+        
+        #detector {
+            position: relative;
+        }
+        
+        .pitch-recording-icon {
+            width: 50px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            display: none;
+        }
+        
+        .loud_speaker {
+            width: 30px;
+        }
+        
+        .pitch-recording-msg span.f1 {
+            font-weight: 100;
+            font-size: 10px;
+        }
+        
+        #pitch-recoding-msg-h3>span.f2 {
+            font-weight: 100;
+        }
+        
+        #pitch-recoding-msg-h3>span.f3 {
+            font-size: 17px;
+            font-weight: 100;
+        }
+        
+        img.mic-img {
+            width: 215px;
+            left: 20px;
+            position: absolute;
+            top: 6px;
+            cursor: pointer;
+        }
+        
+        .mic-div {
+            background: transparent;
+            position: absolute;
+            top: -10px;
+        }
+        
+        .btns-after-inspector {
+            clear: both;
+            margin: 30px 0px 30px 0px;
+        }
+        
+        .bottom-space {
+            display: none;
+        }
+        
+        @media(max-width:991px) {
+            .bottom-space {
+                /*background: red;*/
+                display: block;
+                width: 100%;
+                height: 100px;
+                clear: both;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        //custom function for loging
+        var print_logs_of_console = false;
+        var console_log = function() {
+            if (print_logs_of_console) {
+                var e = new Error(arguments);
+                // var CalledFromLine = e.stack;//if you want to see full stack of call
+                var CalledFromLine = e.stack.split('at ')[2];
+
+
+                //For adding prefix
+                // 1. Convert args to a normal array
+                var args = Array.prototype.slice.call(arguments);
+
+                // 2. Apped line number in list
+                args.push(CalledFromLine);
+
+
+                console.log.apply(console, args);
+            }
+        }
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-52TZGML');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- quiz file, head tag end -->
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="inner-contatiner">
+            <div class="progress-bar-my">
+                <div class="close-div">
+                    <a href="https://dev2.academyofvoice.com/flow/fc4a/pricing" id="close-link" onclick="return confirm('Are you sure you want to quit?')">X</a>
+                </div>
+                <div id="progress" class="ui-progressbar ui-widget ui-widget-content ui-corner-all" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <div class="ui-progressbar-value ui-widget-header ui-corner-left" style="display: none; width: 0%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+            <!-- video1-layout start -->
+            <div class="video1-layout item active" id='item0' data-item_num='0' data-select_min="0" data-select_max="0" style="" data-v_store_in="intro_video_seen">
+                <div class="full-width-div-v">
+                    <div class="video-sectionv">
+                        <h2>Welcome to Your Account!</h2>
+                        <iframe id="frame-video" height="280" src="https://www.youtube.com/embed/z99NkPOokJ8?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p>I'm Dr. Anna Bridges, your Virtual Voice Coach.</p>
+                        <p> Now that you are a member, we can get started together. I will tell you exactly what to do to start transforming your voice, step by step. </p>
+                        <p> Today you 're a Level 1 student. As you complete each set of singing tasks, you' ll get to the next level. </p>
+                    </div>
+                </div>
+            </div>
+            <!-- video1-layout End -->
+
+
+            <!-- quiz2-layout start  -->
+            <div class="quiz2-layout item" id='item1' data-item_num='1' data-select_min="1" data-select_max="1" data-v_store_in="initial_experience_quotient">
+                <div class="full-width-div-v">
+                    <div class="voicessment-page">
+                        <h3>How experienced a singer are you?</h3>
+                        <button class="btn select-text-as-btn" data-value="fc4a_quiz1_he1__beginner">I`m a beginner with a little experience.</button>
+                        <button class="btn select-text-as-btn" data-value="fc4a_quiz1_he1__experience">I have some singing experience.</button>
+                        <button class="btn select-text-as-btn" data-value="fc4a_quiz1_he1__a_lot_experience_never_studied">I have a lot of singing experience, but never took voice lessons.</button>
+                        <button class="btn select-text-as-btn" data-value="fc4a_quiz1_he1__a_lot_experience_and_studied">I have a lot of singing experience, and studied voice.</button>
+                        <button class="btn select-text-as-btn" data-value="fc4a_quiz1_he1__expert">I`m an expert level singer.</button>
+                    </div>
+                </div>
+            </div>
+            <!-- quiz2-layout end  -->
+
+
+            <!-- quiz2-layout start  of q: gender-->
+            <div class="quiz2-layout item" id='item2' data-item_num='2' data-select_min="1" data-select_max="1" data-v_store_in="gender">
+                <div class="full-width-div-v">
+                    <div class="voicessment-page">
+                        <h3>The gender of my voice is (my gender at time of puberty was)</h3>
+                        <button class="btn select-text-as-btn" data-value="M">Male</button>
+                        <button class="btn select-text-as-btn" data-value="F">Female</button>
+                    </div>
+                </div>
+            </div>
+            <!-- quiz2 layout end of q: gender -->
+
+
+
+
+            <!-- quiz3-layout start  q:Which of the following are you looking to achieve?-->
+            <div class="quiz3-layout item " id='item3' data-item_num='3' data-select_min="1" data-select_max="999" data-v_store_in="initial_voicegoals">
+                <div class="full-width-div-v">
+                    <h3 class="question-haeding-blue black-text">Which of the following are you looking to achieve?</h3>
+                    <h4 class="h4_type1"></h4>
+                    <div class="voicessment-page small-btn-page" style="display: flex; flex-wrap: wrap;">
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_lta__bba">Better breathing ability</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_lta__sv">Stronger voice (clarity, projection)</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_lta__tsm">To sing more “in tune” or “on pitch.”</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_lta__richer_sound">Richer sound (resonance, vowels)</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_lta__less_tension">Less tension in the voice</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_lta__easier_production">Easier production of sound</button>
+
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_lta__want_to_sing_better_high_notes">I want to sing better high notes</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_lta__want_to_singh_better_low_notes">I want to sing better low notes</button>
+
+                        <button class="btn select-text-as-btn only4genderF" id="half-btn" data-option="fc4a_quiz1_lta__i_want_to_belt_higher">I want to 'belt' higher</button>
+                        <button class="btn select-text-as-btn only4genderF" id="half-btn" data-option="fc4a_quiz1_lta__i_want_to_learn_how_to_mix">I want to learn how to 'mix'</button>
+                        <button class="btn select-text-as-btn only4genderM" id="half-btn" data-option="fc4a_quiz1_lta__want_to_reach_higher_notes">I want to reach higher notes before my voice breaks to falsetto</button>
+                        <button class="btn select-text-as-btn only4genderM" id="half-btn" data-option="fc4a_quiz1_lta__want_a_stronger_falsetto_voice">I want a stronger falsetto voice</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_lta__want_more_consistency">I want more consistency and stability in my voice.</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_lta__want_to_feel_confident">I want to feel more confident singing in front of people</button>
+                    </div>
+                </div>
+            </div>
+            <!-- quiz3-layout End, q:Which of the following are you looking to achieve? -->
+
+
+            <!-- quiz3-layout start  q:Most Important Voice Goal-->
+            <div class="quiz3-layout item " id='item4' data-item_num='4' data-select_min="1" data-select_max="1" data-v_store_in="initial_voicegoals_mostimportant">
+                <div class="full-width-div-v">
+                    <div class="voicessment-page small-btn-page">
+                        <h3 class="question-haeding-blue black-text">Most Important Voice Goal</h3>
+                        <div class="item_dynamic_view">
+                            <!-- <button class="btn select-text-as-btn" id="half-btn" data-option="1">Better breathincg ability</button> -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- quiz3-layout End, q:Most Important Voice Goal  -->
+
+            <!-- quiz3-layout start  q: Which of the following most closely describes your performance goals?-->
+            <div class="quiz3-layout item " id='item5' data-item_num='5' data-select_min="1" data-select_max="300" data-v_store_in="initial_performancegoals">
+                <div class="full-width-div-v">
+                    <div class="voicessment-page small-btn-page">
+                        <h3 class="question-haeding-blue black-text">Which of the following most closely describes your performance goals?</h3>
+                        <h4 class="h4_type1"></h4>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_pg__audition_coming_up">I have an audition coming up</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_pg__singing_in_a_wedding">I am singing in a wedding or at an event</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_pg__sing_at_home">I just want to sing at home for fun</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_pg__where_i_play_out">I want to get better to the point where I can play out</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_pg__want_better_recordings">I want to make better recordings of my voice</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_pg__get_together_with_friends">I want to (or currently) get together with friends to sing</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_pg__sing_karaoke">I want to (or currently) sing karaoke</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_pg__sing_at_church">I want to (or currently) sing at church</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_pg__sing_in_a_choir">I want to (or currently) sing in a choir</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_pg__sing_in_a_band">I want to (or currently) sing in a band</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_pg__sing_opera">I want to (or currently) sing opera or classical music</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_pg__take_my_singing_up">I’m at a good level for a soloist, but want to take my singing up another notch</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_pg__want_to_perform_my_own_songs">I’m a singer-songwriter and want to (or currently) perform my own songs</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_pg__i_want_a_stronger_speaking">I want a stronger speaking voice for my career or other speaking interests.</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_pg__need_help_with_sustainable_technique">I’m a professional musician and I need help with sustainable technique</button>
+                        <button class="btn select-text-as-btn" id="half-btn" data-option="fc4a_quiz1_pg__other_please_describe">Other (please describe)</button>
+                    </div>
+                </div>
+            </div>
+            <!-- quiz3-layout End, q:Which of the following most closely describes your performance goals? -->
+
+            <!-- quiz3-layout start  q:Most Important Performance Goal-->
+            <div class="quiz3-layout item " id='item6' data-item_num='6' data-select_min="1" data-select_max="1" data-v_store_in="initial_performancegoals_mostimportant">
+                <div class="full-width-div-v">
+                    <div class="voicessment-page small-btn-page">
+                        <h3 class="question-haeding-blue black-text">Most Important Performance Goal</h3>
+                        <div class="item_dynamic_view">
+                            <!-- <button class="btn select-text-as-btn" id="half-btn" data-option="1">Better breathing ability</button> -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- quiz3-layout End, q:Most Important Performance Goal -->
+
+
+
+            <!-- quiz2-layout start  q:Let’s measure your pitch so we can generate your voice training! -->
+            <div class="quiz2-layout item" id='item7' data-item_num='7' data-select_min="1" data-select_max="1" data-v_store_in="initial_pitchtest_ok">
+                <div class="full-width-div-v">
+                    <div class="voicessment-page">
+                        <h3>Let’s measure your pitch so we can generate your voice training!</h3>
+                        <h4 class="h4_type1">Choose one of these 2 options to get started</h4>
+
+                        <button class="btn select-text-as-btn" data-value="yes">I have a microphone and I’m in a quiet place where I can be heard by my microphone or device.</button>
+                        <button class="btn select-text-as-btn" data-value="no">I don’t have a microphone enabled, or I’m in a noisy place. Let’s skip this for now.</button>
+                    </div>
+                </div>
+            </div>
+            <!-- quiz2-layout end  q:Let’s measure your pitch so we can generate your voice training! -->
+
+
+            <!-- quiz2-layout start  q:Pitch finder -->
+            <div class="quiz3-layout item" id='item8' data-item_num='8' data-select_min="0" data-select_max="1" data-v_store_in="pitch_test">
+                <div class="full-width-div-v">
+                    <div class="voicessment-page">
+                        <h3 id="pitch-recoding-msg-h3">
+                            <span class="f1">Click the microphone and say: </span>
+                            <br>
+                            <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/loud_speaker.png" alt="Just say.." title="Just say.." class="loud_speaker">
+                            <span class="f2">‘mmm-hmmm’ </span>
+                            <br>
+                            <span class="f3">so we can measure your pitch.</span>
+                        </h3>
+                        <div id="picth-finder-view">
+                            <!--  Hidden container -->
+                            <span style="display: none;" id="pitch-find-btnz">
+                <label for="time-interval">Time Interval (milliseconds):</label>
+                <input type="text" id="time-interval" value="60000">ms
+
+                <button id="start-recording">Start</button>
+                <button id="stop-recording" disabled="">Stop</button>
+                <button id="save-recording" disabled="">Save</button>
+                <div id="audios-container">Open recorded audio links will come here</div>
+
+
+                <button onclick="toggleLiveInput()" id="toggleLiveInputBtn">Start Recording</button>
+                <!-- data-state can be: stop or playing -->
+                <button onclick="playSound('lastRecordingBuffer');" id="play-recording" data-state="stop" disabled>Calculate Pitch Of Last Recording</button>
+
+                <button id="skip_recording1">Skip</button>
+              </span>
+                            <!--  Hidden container -->
+                            <div class="f2" id="calculating-pitch-msg-div">Calculating pitch....</div>
+                            <div id="pitch-results">
+                                Your pitch details are:
+                                <br/> Minimum pitch:
+                                <span class="f1" id="min-pitch"></span>Hz
+                                <br/> Maximum pitch:
+                                <span class="f1" id="max-pitch"></span>Hz
+                                <br/> Average pitch:
+                                <span class="f1" id="avg-pitch"></span>Hz
+                                <br/>
+                            </div>
+                            <div class="spacepitch">
+                                <div id="detector" class="vague">
+
+                                    <div class="mic-div">
+                                        <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/mic.png" alt="Mic Image" title="Click on mic button for start recording.." class="mic-img" />
+                                    </div>
+
+                                    <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/recording_icon.gif" alt="Recording.." title="Recording.." class="pitch-recording-icon" />
+                                    <div class="pitch">
+                                        <span id="pitch">--</span>Hz</div>
+                                    <div class="note">
+                                        <span id="note">--</span>
+                                    </div>
+                                    <canvas id="output" width="300" height="42"></canvas>
+                                    <div id="detune">
+                                        <span id="detune_amt">--</span>
+                                        <span id="flat">cents &#9837;</span>
+                                        <span id="sharp">cents &#9839;</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btns-after-inspector">
+                                <button id="skip_recording" class="skip2-btn">Skip</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript" src="https://dev2.academyofvoice.com/template_file/js/fc4a-inner-js/pitch-detector/MediaStreamRecorder.js?201910171646">
+            </script>
+            <script type="text/javascript" src="https://dev2.academyofvoice.com/template_file/js/fc4a-inner-js/pitch-detector/pitchdetect.js?201910171646"></script>
+            <script type="text/javascript" src="https://dev2.academyofvoice.com/template_file/js/fc4a-inner-js/pitch-detector/custom.js?201910171646"></script>
+            <!-- quiz2-layout end  q:Pitch finder -->
+
+            <!-- quiz2-layout start q#12: Which of these is important to practice in your vocal training? 
+                  updated: Which one of these is important to practice in your vocal training?             -->
+
+            <div class="quiz2-layout item" id="item9" data-item_num="9" data-select_min="1" data-select_max="1" data-v_store_in="important_to_practice_vocal_training_1">
+                <div class="full-width-div-v">
+                    <div class="voicessment-page">
+                        <h3>Which one of these is important to practice in your vocal training?</h3>
+                        <div class="ourbox">
+                            <button class="btn select-text-as-btn" data-value="laughing">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/Laughing.png" alt="Laughing" />Laughing</button>
+                            <button class="btn select-text-as-btn" data-value="snoring">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/Snoring.png" alt="Laughing" />Snoring</button>
+                            <button class="btn select-text-as-btn" data-value="breathing">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/breathing.png" alt="breathing" />Breathing</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- quiz2-layout end  q#12:-->
+
+
+            <!-- quiz2-layout start q#13: Which of these is important to practice in your vocal training?  -->
+            <div class="quiz2-layout  item" id="item10" data-item_num="10" data-select_min="1" data-select_max="1" data-v_store_in="important_to_practice_vocal_training_2">
+                <div class="full-width-div-v">
+                    <div class="voicessment-page">
+                        <h3>Which one of these is important to practice in your vocal training?</h3>
+                        <div class="ourbox">
+                            <button class="btn select-text-as-btn" data-value="jumping">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/jumping.png" alt="Jumping" />Jumping</button>
+                            <button class="btn select-text-as-btn" data-value="posture">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/Posture.png" alt="Posture" />Posture</button>
+                            <button class="btn select-text-as-btn" data-value="swimming">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/swimming.png" alt="Swimming" />Swimming</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- quiz2-layout end  q#13:-->
+
+
+            <!-- quiz3-layout start  q12: To develop a strong and beautiful voice-->
+            <div class="quiz3-layout item " id='item11' data-item_num='11' data-select_min="1" data-select_max="999" data-v_store_in="initial_traininggoals">
+                <div class="full-width-div-v">
+                    <div class="voicessment-page small-btn-page">
+                        <h3 class="question-haeding-blue black-text">Please select all of the training priorities you’d like to work on.</h3>
+                        <button class="btn select-text-as-btn half-btn" data-option="fc4a_quiz1_tp__Breathing">Breathing</button>
+                        <button class="btn select-text-as-btn half-btn" data-option="fc4a_quiz1_tp__Posture">Posture</button>
+                        <button class="btn select-text-as-btn half-btn" data-option="fc4a_quiz1_tp__Vocal_Range">Vocal Range</button>
+                        <button class="btn select-text-as-btn half-btn" data-option="fc4a_quiz1_tp__Vocal_Strength">Vocal Strength</button>
+                        <button class="btn select-text-as-btn half-btn" data-option="fc4a_quiz1_tp__Expressive_Vocals">Expressive Vocals</button>
+                        <button class="btn select-text-as-btn half-btn" data-option="fc4a_quiz1_tp__Pick_My_Songs">Pick My Songs</button>
+                        <button class="btn select-text-as-btn half-btn" data-option="fc4a_quiz1_tp__Prepare_to_Sing_Live">Prepare to Sing Live</button>
+
+                    </div>
+                </div>
+            </div>
+            <!-- quiz3-layout end  q12: -->
+
+
+            <!-- quiz3-layout start  q13: To develop a strong and beautiful voice-->
+            <div class="quiz3-layout item " id='item12' data-item_num='12' data-select_min="1" data-select_max="1" data-v_store_in="initial_traininggoals_mostimportant">
+                <div class="full-width-div-v">
+                    <div class="voicessment-page small-btn-page">
+                        <h3 class="question-haeding-blue black-text">Pick the training priority that’s most important to you out of the ones you chose before.</h3>
+                        <div class="item_dynamic_view">
+                            <!-- <button class="btn select-text-as-btn" id="half-btn" data-option="1">Better breathing ability</button> -->
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- quiz3-layout end  q13: -->
+
+            <!-- quiz2-layout start q#13: To create more resonance and a stronger sound in our voice we do special exercises for our ?    -->
+            <div class="quiz2-layout item qc-list1" id="item13" data-item_num="13" data-select_min="1" data-select_max="1" data-v_store_in="tongue_question">
+                <div class="full-width-div-v">
+                    <div class="voicessment-page">
+                        <h3>To create more resonance and a stronger sound in our voice, we do special exercises for our:</h3>
+                        <div class="ourbox">
+                            <button class="btn select-text-as-btn" data-value="Leg">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/Legs.png" alt="Leg" />Leg
+              </button>
+                            <button class="btn select-text-as-btn" data-value="Cheek">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/cheek.png" alt="Cheek" />Cheek
+              </button>
+                            <button class="btn select-text-as-btn" data-value="Tongue">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/tongue.png" alt="Tongue" />Tongue
+              </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- quiz2-layout end  q#13:-->
+
+            <!-- quiz2-layout start q#14: For maximum vocal health we train for a sound that is ?    -->
+            <div class="quiz2-layout item qc-list1" id="item14" data-item_num="14" data-select_min="1" data-select_max="1" data-v_store_in="sound_question">
+                <div class="full-width-div-v">
+                    <div class="voicessment-page">
+                        <h3>For maximum vocal health, we train for a sound that is:</h3>
+                        <div class="ourbox">
+                            <button class="btn select-text-as-btn" data-value="Clear">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/clear.png" alt="Clear" />Clear
+              </button>
+                            <button class="btn select-text-as-btn" data-value="Raspy">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/raspy.png" alt="Raspy" />Raspy
+              </button>
+                            <button class="btn select-text-as-btn" data-value="Breathy">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/breathy.png" alt="Breathy" />Breathy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- quiz2-layout  end  q#14:-->
+
+            <!-- quiz2-layout start q#15: We learn a few methods to get our audience to be ?  -->
+            <div class="quiz2-layout item qc-list1" id="item15" data-item_num="15" data-select_min="1" data-select_max="1" data-v_store_in="audience_engaged_question">
+                <div class="full-width-div-v">
+                    <div class="voicessment-page">
+                        <h3>We learn a few methods to get our audience to be:</h3>
+                        <div class="ourbox">
+                            <button class="btn select-text-as-btn" data-value="Surprised">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/distracted.png" alt="Surprised" />Surprised</button>
+                            <button class="btn select-text-as-btn" data-value="Engaged">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/engaged.png" alt="Engaged" />Engaged</button>
+                            <button class="btn select-text-as-btn" data-value="Confused">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/confused.png" alt="Confused" />Confused</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- quiz2-layout  end  q#15:-->
+
+
+            <!-- quiz2-layout start q#16: We learn the performance skills to make ourselves ?    -->
+            <div class="quiz2-layout item qc-list1" id="item16" data-item_num="16" data-select_min="1" data-select_max="1" data-v_store_in="performance_confident_question">
+                <div class="full-width-div-v">
+                    <div class="voicessment-page">
+                        <h3>We learn the performance skills to make ourselves:</h3>
+                        <div class="ourbox">
+                            <button class="btn select-text-as-btn" data-value="Confident">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/confident.png" alt="Confident" />Confident</button>
+                            <button class="btn select-text-as-btn" data-value="Forgetful">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/forgetful.png" alt="Forgetful" />Forgetful</button>
+                            <button class="btn select-text-as-btn" data-value="Mediocre">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/mediocre.png" alt="Mediocre" />Mediocre</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- quiz2-layout  end  q#16:-->
+
+            <!-- quiz2-layout start q#17: For maximum vocal health we train for a sound that is ?    -->
+            <div class="quiz2-layout item qc-list1" id="item17" data-item_num="17" data-select_min="1" data-select_max="1" data-v_store_in="vowel_project_question">
+                <div class="full-width-div-v">
+                    <div class="voicessment-page">
+                        <h3>We learn to place our vowels like a-e-i-o-u correctly so that our sound "pops" and with very little effort our voice can:</h3>
+                        <div class="ourbox">
+                            <button class="btn select-text-as-btn" data-value="Yodel">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/yodel.png" alt="Yodel" />Yodel</button>
+                            <button class="btn select-text-as-btn" data-value="Squeak">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/squeak.png" alt="Squeak" />Squeak</button>
+                            <button class="btn select-text-as-btn" data-value="Project">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/project.png" alt="Project" />Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- quiz2-layout  end  q#17:-->
+
+
+        </div>
+    </div>
+    </div>
+    <style type="text/css">
+        .box.highlight div#back {
+            display: none !important;
+        }
+        
+        div#back {
+            border: none;
+            background: rgb(230, 230, 230);
+            color: #999;
+            margin: 20px 0px;
+            border-radius: 20px;
+            display: none !important;
+            /* disable back button feature*/
+        }
+        
+        @media screen and (max-width: 992px) {
+            div#back {
+                margin-left: 20px;
+            }
+        }
+    </style>
+    <!--Bottom-Section-->
+    <div class="box outer-box-bottom">
+        <div id="main-remove-class" class="bottom-full-size q">
+            <div class="bottom-button-section">
+                <div href="#myCarousel" data-slide="prev" id="back" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false">
+                    <span class="ui-button-text">Back</span>
+                </div>
+
+                <div class="checkbox-div">
+                    <label class="container">
+            <div class="container-spcmarginsbottom">
+              <span class="first-font-check-disply">Awesome! Let's go!</span>
+              <div class="diplay-alerts">
+                <h3>Correct solution:</h3>
+                <h4 id="correct-solution-value">CorrectSolutionValue</h4>
+              </div>
+              <span class="checkmark">
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/rounde-foot-checkmark.png" border="0" id="green-check-mark"
+                />
+                <img src="https://dev2.academyofvoice.com/template_file/public_image/fc4images/worng.png" border="0" id="red-cross-mark"
+                />
+              </span>
+            </div>
+          </label>
+                </div>
+                <div class="countinew-div">
+                    <a class="disbledbtn1 continue-button-active testbutton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only">
+                        <span class="ui-button-text slide-done">Complete</span>
+                    </a>
+                    <a href="#myCarousel" data-slide="next" id="cont" class="disbledbtn2 continue-button-active testbutton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false">
+                        <span class="ui-button-text slide-done">Continue</span>
+                        <!--<span class="ui-button-text btn-text-gray">VIDEO DONE!</span>-->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-space"></div>
+    <!--EndBottom-Section-->
+
+
+    <script type="text/javascript">
+        //------------- YouTube Video work --- start ----
+        function stopYouTubeVideo() {
+            $('#frame-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+        }
+        //------------- YouTube Video work --- end ----
+
+        var php_session_id = 'lsh43gdi34s4jr5rm74unsmbig48l22s';
+        var csrfName = 'X-CSRF-token';
+        var csrfHash = '21797d0ade2f59a98e2114a51feac759';
+        var site_url = 'https://dev2.academyofvoice.com/';
+        var flow = 'fc4a';
+        var quizRow = null;
+
+        var buttonClickSound = document.createElement('audio');
+        buttonClickSound.setAttribute('src', 'https://dev2.academyofvoice.com/template_file/sound/button-34.wav'); //update for firefox
+        function playBtnClickSound() {
+            buttonClickSound.play();
+        }
+
+        //will move this code in quiz_scripts.php
+        var currValue = 0;
+        var toValue = 0;
+
+        var quiz = {
+            current_question: 0,
+
+            initial_experience_quotient: null,
+            initial_experience_value: 0,
+
+            gender: null,
+
+            initial_voicegoals: [],
+            initial_voicegoals_keys: [],
+
+            initial_voicegoals_mostimportant: null,
+            initial_voicegoals_mostimportant_key: null,
+
+            initial_performancegoals: [],
+            initial_performancegoals_keys: [],
+
+            initial_performancegoals_mostimportant: null,
+            initial_performancegoals_mostimportant_key: null,
+
+            initial_pitchtest_ok: null,
+            min_pitch: null,
+            max_pitch: null,
+            avg_pitch: null,
+
+            important_to_practice_vocal_training_1: null, //q#9
+            important_to_practice_vocal_training_2: null, //q#10
+
+            initial_traininggoals: [], //q#11
+            initial_traininggoals_keys: [],
+
+            initial_traininggoals_mostimportant: null, //q#12
+            initial_traininggoals_mostimportant_key: null,
+
+            tongue_question: null, //q#13
+            sound_question: null, //q14
+            audience_engaged_question: null, //q15
+            performance_confident_question: null, //q16
+            vowel_project_question: null, //17
+
+            text: 'a',
+            version: 'fc4a_quiz_2019_oct_17_1446'
+        };
+
+        function getInitialExpValFromKey(key) {
+            var v = 0;
+            var inital_exp_key_val = {
+                'fc4a_quiz1_he1__beginner': 1,
+                'fc4a_quiz1_he1__experience': 2,
+                'fc4a_quiz1_he1__a_lot_experience_never_studied': 3,
+                'fc4a_quiz1_he1__a_lot_experience_and_studied': 4,
+                'fc4a_quiz1_he1__a_lot_experience_and_studied': 5,
+                'fc4a_quiz1_he1__expert': 6
+            };
+            if (key in inital_exp_key_val) {
+                v = inital_exp_key_val[key];
+            }
+            return v;
+        }
+
+        function setProgressbar(q) { //max is 100
+            // console.log('setProgressbar-'+q);
+            var percent = 0;
+            if (toValue != 0) {
+                percent = q * 100 / toValue;
+            }
+
+            currValue = percent;
+            if (currValue < toValue) {
+                $("#progress").progressbar({
+                    "value": currValue
+                });
+            } else if (currValue > toValue) {
+                $("#progress").progressbar({
+                    "value": currValue
+                });
+            }
+            showHideBackButton(q)
+        }
+
+        function showHideBackButton(item_num) {
+            return; //disable back button show hide working
+            var firstItem = (skipvid) ? 2 : 1;
+            if (item_num < firstItem) {
+                $("#back").css("display", "none");
+            } else {
+                $("#back").css("display", "inline-block");
+            }
+        }
+
+        function stopPropagationOnCont(e) {
+            e.stopPropagation();
+            e.preventDefault();
+        }
+
+        function whenClickOnAnyOption(e, layoutType) {
+            var $this = $(e.target);
+
+            if (layoutType == 'quiz2-layout') {
+                $this.toggleClass('pressed').siblings().removeClass('pressed');
+            } else {
+                $this.toggleClass('pressed');
+            }
+
+            playBtnClickSound();
+
+            var item_num = $('.item:visible').data('item_num');
+            var $item = $('#item' + item_num);
+
+            var select_min = $item.data('select_min');
+            var select_max = $item.data('select_max');
+
+            // var selectedOptions = $item.find('button.pressed').length;
+            var selectedOptions = 0;
+            $item.find('button.pressed').each(function(i, pressedBtn) {
+                if ($(pressedBtn) != $(e.target)) {
+                    selectedOptions++;
+                }
+            });
+
+            console_log('layoutType-' + layoutType, 'selectedOptions-' + selectedOptions + ', select_max-' + select_max);
+
+            if ($this.hasClass('pressed')) {
+                if (selectedOptions > select_max) {
+
+                    if (layoutType == 'quiz2-layout') {
+                        //since quiz2-layout works like radio, don't worry about max 
+                        $(".disbledbtn1").click();
+                    } else {
+                        $this.toggleClass('pressed');
+                        stopPropagationOnCont(e);
+                        alert('Select maximum ' + select_max + ' option!');
+                        return;
+                    }
+
+                } else if (selectedOptions < 1) {
+                    highLightBottomGreenArea(false);
+                } else {
+                    $(".disbledbtn1").click();
+                }
+            } else if (selectedOptions < 1) {
+                highLightBottomGreenArea(false);
+            }
+        }
+
+        function highLightBottomGreenArea(flag) {
+            console_log('highLightBottomGreenArea', flag);
+            if (flag) {
+
+            } else {
+                $('.box').removeClass('highlight'); //Grean highlight of bottom
+            }
+        }
+
+        function stopPitchRecordingAndPlayingAudio() {
+            if ($('#toggleLiveInputBtn').text() == 'Stop!') {
+                $('#toggleLiveInputBtn').click();
+            }
+
+            if ($('#play-recording').data('state') == 'playing') {
+                $('#play-recording').click();
+            }
+        }
+
+        function goToNextStepAfterPitchTest() {
+            stopPitchRecordingAndPlayingAudio();
+            $('.disbledbtn1').click();
+            setTimeout(function() {
+                $('.disbledbtn2').click();
+            }, 200);
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function storeQuizAnsers() {
+            var quiz_session_id = getSetQuizSessionId();
+            var msgDiv1 = $('#msgDiv1');
+
+            setTimeout(function() {
+                    if (text_in_session == 'b') {
+                        // pw_noty = notyMessage('<br/>Building your voice lessons…<br/><br/>', null, {"layout":"center"});
+                        msgDiv1.show();
+                    } else {
+                        pw_noty = notyMessage('Please wait...');
+                        showLoader();
+                    }
+
+                    $.ajax({
+                        url: site_url + "quiz/store_quiz1",
+                        type: 'POST',
+                        data: {
+                            'X-CSRF-token': csrfHash,
+                            quiz: quiz,
+                            quiz_session_id: quiz_session_id
+                        },
+                        dataType: 'json',
+                        success: function(data) {
+                            // console_log('ajax-success');
+                            if (data.bool) {
+                                // notyMessage('Redirect on packages page', 'success');
+                            } else {
+                                notyMessage('Something went wrong, please try again later', 'error');
+                            }
+                        },
+                        complete: function(data) {
+                            // console_log('ajax-complate',data);
+
+                            hideLoader();
+                            if (text_in_session == 'b') {
+                                msgDiv1.hide();
+                            } else {
+                                pw_noty.close();
+                            }
+
+                            setTimeout(function() {
+                                var goToURLAfterQuizSave = site_url + 'flow/' + flow + '/pricing';
+                                window.location.href = goToURLAfterQuizSave;
+                            }, 2000);
+                        },
+                        error: function(req, status, error) {
+                            // console_log('ajax-error',req, status, error);
+                            notyMessage('Something went wrong! please try again later', 'error');
+                        }
+                    });
+                }, 100) //set time out end
+        }
+
+        function getSetQuizSessionId() {
+            var quiz_session_id = getCookie('quiz_session_id');
+
+            if (quiz_session_id == "") {
+                quiz_session_id = php_session_id;
+                document.cookie = "quiz_session_id=" + php_session_id + "; path=/";
+            }
+            return quiz_session_id;
+        }
+
+        function storeQuizAnsersWithoutMsgs() {
+            if (quiz.current_question < 1) {
+                return;
+            }
+            var quiz_session_id = getSetQuizSessionId();
+            console_log('storeQuizAnsersWithoutMsgs-start-sending-request--for quiz_session_id:', quiz_session_id);
+            setTimeout(function() {
+                    $.ajax({
+                        url: site_url + "quiz/store_quiz1",
+                        type: 'POST',
+                        data: {
+                            'X-CSRF-token': csrfHash,
+                            quiz: quiz,
+                            quiz_session_id: quiz_session_id
+                        },
+                        dataType: 'json',
+                        success: function(data) {
+                            console_log('storeQuizAnsersWithoutMsgs-success--', data);
+                        },
+                        complete: function(data) {
+                            console_log('storeQuizAnsersWithoutMsgs-complete--', data);
+                        },
+                        error: function(req, status, error) {
+                            console_log('storeQuizAnsersWithoutMsgs-error--', req, status, error);
+                        }
+                    });
+                }, 100) //set time out end
+        }
+
+        var skipStepTimer = null;
+
+        function skipStep(jumpOn, item_num, hideSkippedItem) {
+            // var jumpOn =  item_num+1;
+
+            if (hideSkippedItem) {
+                $('#item' + item_num).hide();
+            }
+
+            console_log('skip item_num-', item_num, ', and jumpOn=', jumpOn);
+
+            $('#cont').attr("data-slide-to", jumpOn);
+            $('#cont').data('slide', '');
+            // $('#cont').removeAttr("data-slide");
+            if (skipStepTimer != null) {
+                clearTimeout(skipStepTimer);
+            }
+            skipStepTimer = setTimeout(function() {
+                $('#cont').data('slide', 'next');
+                // $('#cont').attr("data-slide", "next");  
+                $('#cont').removeAttr("data-slide-to");
+            }, 1000);
+        }
+
+
+        // this function only show the step when user comes on quiz page second time and we are showing step from his last step
+        function showStep(jumpOn) {
+            // console.log('showStep('+jumpOn+')');
+            if (skipvid == 1 && jumpOn == 0) {
+                jumpOn = 1;
+            }
+
+            quiz.current_question = jumpOn;
+            tracEvent(quiz.current_question);
+            $('#cont').attr("data-slide-to", jumpOn);
+            $('#cont').data('slide', '');
+            // $('#cont').removeAttr("data-slide");
+            $('#cont').click();
+            if (showStepTimer != null) {
+                clearTimeout(showStepTimer);
+            }
+            showStepTimer = setTimeout(function() {
+                // $('#cont').attr("data-slide", "next");  
+                $('#cont').data('slide', 'next');
+                $('#cont').removeAttr("data-slide-to");
+            }, 1000);
+
+            setProgressbar(quiz.current_question);
+        }
+
+        function pageScrollToTop() {
+            // console.log('pageScrollToTop is called');
+            $([document.documentElement, document.body]).animate({
+                scrollTop: 0
+            }, 0);
+        }
+
+        var pageScrollToTopTimer = null;
+
+        function workBeforeShowingItem(next_item_num) {
+            if (pageScrollToTopTimer != null) {
+                clearTimeout(pageScrollToTopTimer);
+            }
+            pageScrollToTopTimer = setTimeout(function() {
+                pageScrollToTop();
+            }, 700);
+            //wor before showing next question
+            if ($('#item' + next_item_num).length > 0) {
+                if (next_item_num == 1) {
+                    stopYouTubeVideo();
+                }
+                var $next_item = $('#item' + next_item_num);
+                var v_store_in = $next_item.data('v_store_in');
+
+                if (v_store_in == 'initial_voicegoals') {
+
+                    //for testing show option number in start of option
+                    // $('#item'+next_item_num+' button').each(function(i, pressedBtn) {
+                    //   var $objOfPressedBtn = $(pressedBtn);
+                    //   $objOfPressedBtn.text( $objOfPressedBtn.data('option')+'_'+$objOfPressedBtn.text());
+                    // });
+
+                    $('#item' + next_item_num + ' button').show().removeClass('pressed'); //show all buttons
+                    //hide button of opposit gender
+                    if (quiz.gender == 'M') {
+                        $('#item' + next_item_num + ' button.only4genderF').hide();
+                    } else {
+                        $('#item' + next_item_num + ' button.only4genderM').hide();
+                    }
+                } else if (v_store_in == 'initial_voicegoals_mostimportant') {
+                    var ivmHTML = '';
+
+                    for (i in quiz.initial_voicegoals) {
+                        var key = quiz.initial_voicegoals_keys[i];
+                        var value = quiz.initial_voicegoals[i];
+                        ivmHTML += '<button class="btn select-text-as-btn" id="half-btn" data-option="' + key + '">' + value + '</button>';
+                    }
+                    $next_item.find('.item_dynamic_view').html(ivmHTML);
+                } else if (v_store_in == 'initial_performancegoals_mostimportant') {
+                    var ivmHTML = '';
+
+                    for (i in quiz.initial_performancegoals) {
+                        var key = quiz.initial_performancegoals_keys[i];
+                        var value = quiz.initial_performancegoals[i];
+                        ivmHTML += '<button class="btn select-text-as-btn" id="half-btn" data-option="' + key + '">' + value + '</button>';
+                    }
+                    $next_item.find('.item_dynamic_view').html(ivmHTML);
+                } else if (v_store_in == 'pitch_test') {
+                    //console_log('356+++In work before--toggleLiveInputBtn');
+                    //$('#toggleLiveInputBtn').click();
+                } else if (v_store_in == 'initial_traininggoals_mostimportant') {
+                    var ivmHTML = '';
+
+                    for (i in quiz.initial_traininggoals) {
+                        var key = quiz.initial_traininggoals_keys[i];
+                        var value = quiz.initial_traininggoals[i];
+
+                        ivmHTML += '<button class="btn select-text-as-btn" id="half-btn" data-option="' + key + '">' + value + '</button>';
+                    }
+                    $next_item.find('.item_dynamic_view').html(ivmHTML);
+                }
+            }
+        }
+
+
+
+        function tracEvent(item_num) {
+            var itemObj = $('#item' + item_num);
+            var v_store_in = itemObj.data('v_store_in');
+            // console.log('tracEvent- item_num: '+item_num+', v_store_in: '+v_store_in);
+            if (v_store_in == undefined) {
+                return;
+            }
+            var screenOnItemNumber = [];
+            screenOnItemNumber["intro_video_seen"] = "QWV - quiz welcome video";
+            screenOnItemNumber["initial_experience_quotient"] = "QEXP - experience";
+            screenOnItemNumber["gender"] = "QGEN - survey gender";
+            screenOnItemNumber["initial_voicegoals"] = "QVG - voice goals";
+            screenOnItemNumber["initial_voicegoals_mostimportant"] = "QVGI - most important voice goal";
+            screenOnItemNumber["initial_performancegoals"] = "QPG - performance goals";
+            screenOnItemNumber["initial_performancegoals_mostimportant"] = "QPGI - most important performance goal";
+            var pitchtest_yes_no = "yes no";
+            if (v_store_in == "initial_pitchtest_ok") {
+                pitchtest_yes_no = $('#item' + item_num + ' button.pressed').data('value');
+            }
+            screenOnItemNumber["initial_pitchtest_ok"] = "QPTOK - quiz pitch test " + pitchtest_yes_no + " question";
+            screenOnItemNumber["pitch_test"] = "QPT - quiz pitch test";
+            screenOnItemNumber["important_to_practice_vocal_training_1"] = "QCBR - quiz card breathing question";
+            screenOnItemNumber["important_to_practice_vocal_training_2"] = "QCPQ - quiz card posture question";
+            screenOnItemNumber["initial_traininggoals"] = "QTG - quiz training goals";
+            screenOnItemNumber["initial_traininggoals_mostimportant"] = "QTGI - most important training goal";
+
+            screenOnItemNumber["tongue_question"] = "QCTG - quiz card tongue question";
+            screenOnItemNumber["sound_question"] = "QCCS - quiz card clear sound question";
+            screenOnItemNumber["audience_engaged_question"] = "QCAE - quiz card audience engaged question";
+            screenOnItemNumber["performance_confident_question"] = "QCPC - quiz card performance confident question";
+            screenOnItemNumber["vowel_project_question"] = "QCVP - quiz card vowel project question";
+
+            var eventAction = screenOnItemNumber[v_store_in];
+            if (typeof eventAction != 'undefined') {
+                trackEventOfQuizScreen(eventAction);
+            }
+        }
+
+        function trackEventOfQuizScreen(eventAction) {
+            // console.log('eventAction='+eventAction);
+            dataLayer.push({
+                'event': 'trackEvent',
+                'eventCategory': 'Show Quiz Screen - Category',
+                'eventAction': eventAction, //'PFS - payment form submitted',
+                'eventLabel': 'Show Quiz Screen - Label'
+            });
+        }
+
+        //Set ip in quiz answers
+        function setIpOfUser() {
+            //https://stackoverflow.com/questions/391979/how-to-get-clients-ip-address-using-javascript
+            $.getJSON('https://api.ipify.org/?format=json', function(ipData) {
+                quiz.ip_address = ipData.ip;
+            });
+        }
+
+        function setReqURL() {
+            quiz.req_url = document.URL;
+        }
+
+        //Assign dynamic variables to script
+        var skipvid = 0;
+        var skippt = 0;
+        var qc = 'a';
+        var text_in_session = 'a';
+        var showStepTimer = null;
+        $(document).ready(function() {
+            $('#myCarousel')
+                .on('slid.bs.carousel', function() {
+                    // console.log('canContinue, slide effect done. Finished sliding-'+Date.now());
+                    removeHighlightedClasses();
+                });
+
+            setIpOfUser();
+            setReqURL();
+
+            quiz.browser = 'Chrome';
+            quiz.text = text_in_session;
+
+            //Skip pitch test for IE and Safari
+            if (['Safari', 'Internet Explorer'].indexOf(quiz.browser) > -1) {
+                skippt = 1;
+            }
+
+            if (qc != 'b') { //so remove div's having class qc-list1
+                $('.qc-list1').remove(); //its is also associated with .item
+            }
+            toValue = $('.item').length - 1; //-1 since items count started with 0
+
+            if (quizRow != null && quizRow.current_question != null && quizRow.current_question != '') {
+                quiz.current_question = parseInt(quizRow.current_question);
+            }
+
+            //when user already answered all then do not pre-fill with last answered data
+            var wasUserAnsweredAll = (quizRow != null && quiz.current_question >= toValue);
+            if (toValue > 0 && wasUserAnsweredAll == false) {
+                //when customer already answered few questions, then pre-select that options
+                if (quizRow != null && quizRow.id > 0) {
+
+                    function highLightBtn(actionType, stored_in, stored_value, store_text_in) {
+                        console_log(actionType, stored_in, stored_value, store_text_in);
+                        $('.item').each(function(i, itemDiv) {
+                            var $itemDivObj = $(itemDiv);
+                            var v_store_in = $itemDivObj.data('v_store_in');
+                            if (['addPressedWhenValue', 'addPressedWhenOption', 'addPressedWhenOptionOrOptionsLength1', 'addPressedWhenValueOnMultiples'].indexOf(actionType) > -1) {
+                                if (stored_in == v_store_in) {
+                                    $itemDivObj.find('button').each(function(bi, btnDiv) {
+                                        var $btnDivObj = $(btnDiv);
+                                        var curValue = $btnDivObj.data('value');
+                                        var curOption = $btnDivObj.data('option');
+                                        if (actionType == 'addPressedWhenValue' && stored_value == curValue) {
+                                            $btnDivObj.addClass('pressed');
+                                        } else if (actionType == 'addPressedWhenOption' && stored_value == curOption) {
+                                            $btnDivObj.addClass('pressed');
+                                        } else if (actionType == 'addPressedWhenOptionOrOptionsLength1') {
+                                            console_log('374--' + stored_in, $itemDivObj.find('button').text());
+                                            if (stored_value == curOption || $itemDivObj.find('button').length == 1) {
+                                                $btnDivObj.addClass('pressed');
+                                            }
+                                        } else if (actionType == 'addPressedWhenValueOnMultiples' && stored_value.indexOf(curOption) > -1) {
+                                            $btnDivObj.addClass('pressed');
+                                            quiz[store_text_in].push($btnDivObj.text());
+                                        }
+                                    });
+                                }
+                            }
+                        });
+                    }
+
+                    //step1
+                    if (quizRow.initial_experience_quotient != null) {
+                        quiz.initial_experience_quotient = quizRow.initial_experience_quotient;
+                        highLightBtn('addPressedWhenValue', 'initial_experience_quotient', quiz.initial_experience_quotient);
+                    }
+                    //step2
+                    if (quizRow.gender != null) {
+                        quiz.gender = quizRow.gender;
+                        highLightBtn('addPressedWhenValue', 'gender', quiz.gender);
+                    }
+                    //step3
+                    if (quizRow.initial_voicegoals_keys != null) {
+                        quiz.initial_voicegoals_keys = quizRow.initial_voicegoals_keys.split(',');
+                        quiz.initial_voicegoals = [];
+                        highLightBtn('addPressedWhenValueOnMultiples', 'initial_voicegoals', quiz.initial_voicegoals_keys, 'initial_voicegoals');
+                    }
+
+                    //step4
+                    if (quizRow.initial_voicegoals_mostimportant_key != null) {
+                        quiz.initial_voicegoals_mostimportant_key = quizRow.initial_voicegoals_mostimportant_key;
+                        workBeforeShowingItem(4); //create view 
+                        highLightBtn('addPressedWhenOptionOrOptionsLength1', 'initial_voicegoals_mostimportant', quiz.initial_voicegoals_mostimportant_key);
+                    }
+
+                    //step5
+                    if (quizRow.initial_performancegoals_keys != null) {
+                        quiz.initial_performancegoals_keys = quizRow.initial_performancegoals_keys.split(',');
+                        quiz.initial_performancegoals = [];
+                        highLightBtn('addPressedWhenValueOnMultiples', 'initial_performancegoals', quiz.initial_performancegoals_keys, 'initial_performancegoals');
+                    }
+
+                    //step6
+                    if (quizRow.initial_performancegoals_mostimportant_key != null) {
+                        quiz.initial_performancegoals_mostimportant_key = quizRow.initial_performancegoals_mostimportant_key;
+                        workBeforeShowingItem(6); //create view 
+                        highLightBtn('addPressedWhenOptionOrOptionsLength1', 'initial_performancegoals_mostimportant', quiz.initial_performancegoals_mostimportant_key);
+
+
+                    }
+
+                    //ste7 and step8 work
+                    if (quizRow.initial_pitchtest_ok != null) {
+                        quiz.initial_pitchtest_ok = quizRow.initial_pitchtest_ok;
+                        highLightBtn('addPressedWhenValue', 'initial_pitchtest_ok', quiz.initial_pitchtest_ok);
+
+                        if (quiz.initial_pitchtest_ok == 'yes') {
+                            quiz.min_pitch = quizRow.min_pitch;
+                            quiz.max_pitch = quizRow.max_pitch;
+                            quiz.avg_pitch = quizRow.avg_pitch;
+
+                            if (quiz.avg_pitch != null && quiz.avg_pitch != '') {
+                                // $("#pitch-results").show();
+                                $("#min-pitch").html(quiz.min_pitch);
+                                $("#max-pitch").html(quiz.max_pitch);
+                                $("#avg-pitch").html(quiz.avg_pitch);
+                            }
+
+                            if (quiz.current_question == 8) {
+                                setTimeout(function() {
+                                    workBeforeShowingItem(8);
+                                }, 500);
+                            }
+                        }
+                    }
+                    //step9
+                    if (quizRow.important_to_practice_vocal_training_1 != null) {
+                        quiz.important_to_practice_vocal_training_1 = quizRow.important_to_practice_vocal_training_1;
+                        highLightBtn('addPressedWhenValue', 'important_to_practice_vocal_training_1', quiz.important_to_practice_vocal_training_1);
+                    }
+
+                    //ste11
+                    if (quizRow.important_to_practice_vocal_training_2 != null) {
+                        quiz.important_to_practice_vocal_training_2 = quizRow.important_to_practice_vocal_training_2;
+                        highLightBtn('addPressedWhenValue', 'important_to_practice_vocal_training_2', quiz.important_to_practice_vocal_training_2);
+                    }
+
+                    //step11
+                    if (quizRow.initial_traininggoals_keys != null) {
+                        quiz.initial_traininggoals_keys = quizRow.initial_traininggoals_keys.split(',');
+                        quiz.initial_traininggoals = [];
+                        highLightBtn('addPressedWhenValueOnMultiples', 'initial_traininggoals', quiz.initial_traininggoals_keys, 'initial_traininggoals');
+                    }
+
+                    //step12 
+                    if (quizRow.initial_traininggoals_mostimportant_key != null) {
+                        quiz.initial_traininggoals_mostimportant_key = quizRow.initial_traininggoals_mostimportant_key;
+                        workBeforeShowingItem(12); //create view 
+                        highLightBtn('addPressedWhenOptionOrOptionsLength1', 'initial_traininggoals_mostimportant', quiz.initial_traininggoals_mostimportant_key);
+                    }
+
+                    //step13
+                    if (quizRow.tongue_question != null) {
+                        quiz.tongue_question = quizRow.tongue_question;
+                        highLightBtn('addPressedWhenValue', 'tongue_question', quiz.tongue_question);
+                    }
+
+                    //step14
+                    if (quizRow.sound_question != null) {
+                        quiz.sound_question = quizRow.sound_question;
+                        highLightBtn('addPressedWhenValue', 'sound_question', quiz.sound_question);
+                    }
+
+
+                    //step15
+                    if (quizRow.audience_engaged_question != null) {
+                        quiz.audience_engaged_question = quizRow.audience_engaged_question;
+                        highLightBtn('addPressedWhenValue', 'audience_engaged_question', quiz.audience_engaged_question);
+                    }
+
+
+                    //step16
+                    if (quizRow.performance_confident_question != null) {
+                        quiz.performance_confident_question = quizRow.performance_confident_question;
+                        highLightBtn('addPressedWhenValue', 'performance_confident_question', quiz.performance_confident_question);
+                    }
+
+                    //step17
+                    if (quizRow.vowel_project_question != null) {
+                        quiz.vowel_project_question = quizRow.vowel_project_question;
+                        highLightBtn('addPressedWhenValue', 'vowel_project_question', quiz.vowel_project_question);
+                    }
+
+
+                    //On page ready show last question if user is coming back on page
+                    if (quiz.current_question <= toValue) {
+                        showStep(quiz.current_question);
+                    }
+                    setTimeout(function() {
+                        if ([9, 10].indexOf(quiz.current_question) > -1) {
+                            console_log('step9-10', $('#item' + quiz.current_question).find('.active button.pressed').length);
+                            $('.item.active button.pressed').each(function(i, itemDiv) {
+                                var $pressedBtnObj = $(itemDiv);
+                                console_log(i, $pressedBtnObj.text());
+                                $pressedBtnObj.click();
+                                $pressedBtnObj.click();
+                            });
+                        }
+                    }, 1200);
+
+                } else {
+                    showStep(0);
+                }
+            } else {
+                showStep(0);
+            }
+
+            $(document).on('click', '.mic-div > .mic-img', function(e) {
+                $('.mic-div > .mic-img').hide();
+                $('#toggleLiveInputBtn').click();
+            });
+            //For testing show step9 on page load
+            // $('.item').hide(); 
+            // workBeforeShowingItem(8);$('#item8').show(); $('#pitch-find-btnz').show();
+
+
+            $("#skip_recording").on('click', function(e) {
+                goToNextStepAfterPitchTest();
+            });
+
+            function removeHighlightedClasses() {
+                $('.box').removeClass('highlight');
+                $('.box').removeClass('red-alerts');
+            }
+
+            //when click on .disbledbtn1
+            //when click on continue button
+            $(".continue-button-active").on('click', function(e) {
+
+                if ($(this).hasClass('disbledbtn1')) {
+                    removeHighlightedClasses();
+                }
+
+                var item_num = $('.item:visible').data('item_num');
+                var $item = $('#item' + item_num);
+                var v_store_in = $item.data('v_store_in');
+                console_log('item_num=' + item_num);
+
+                var select_min = $item.data('select_min');
+                var select_max = $item.data('select_max');
+
+
+                if (item_num == 9) {
+                    stopPitchRecordingAndPlayingAudio();
+                }
+
+                if ($item.hasClass('video1-layout')) {
+                    //no option to be selected required  
+                } else if (
+                    $item.hasClass('quiz1-layout') ||
+                    $item.hasClass('quiz2-layout') ||
+                    $item.hasClass('quiz3-layout')
+                ) {
+                    var selectedOptions = 1;
+                    if ($item.hasClass('quiz1-layout')) {
+                        selectedOptions = $('#item' + item_num + ' .check-box-quiz:checked').length;
+                    } else if ($item.hasClass('quiz2-layout')) {
+                        selectedOptions = $item.find('button.pressed').length;
+                    } else if ($item.hasClass('quiz3-layout')) {
+                        selectedOptions = $item.find('button.pressed').length;
+                    }
+
+                    console_log('selectedOptions:' + selectedOptions + '----' + select_min);
+
+                    if (select_min != 0 && selectedOptions < select_min) {
+                        stopPropagationOnCont(e);
+                        alert('Select at least ' + select_min + ' option!');
+                        return;
+                    } else if (select_max != 0 && selectedOptions > select_max) {
+                        stopPropagationOnCont(e);
+                        alert('Select maximum ' + select_max + ' option!');
+                        return;
+                    }
+                }
+
+
+                if ($(this).hasClass('disbledbtn1')) {
+                    var boxClass = 'green';
+                    var correctSolutionValue = '';
+                    if (v_store_in == 'important_to_practice_vocal_training_1') {
+                        var value = $('#item' + item_num + ' button.pressed').data('value');
+                        if (value != 'breathing') { //key name
+                            boxClass = 'red';
+                            correctSolutionValue = 'Breathing'; //key value
+                        }
+                    } else if (v_store_in == 'important_to_practice_vocal_training_2') {
+                        var value = $('#item' + item_num + ' button.pressed').data('value');
+                        if (value != 'posture') {
+                            boxClass = 'red';
+                            correctSolutionValue = 'Posture';
+                        }
+                    } else if (v_store_in == 'tongue_question') {
+                        var value = $('#item' + item_num + ' button.pressed').data('value');
+                        if (value != 'Tongue') {
+                            boxClass = 'red';
+                            correctSolutionValue = 'Tongue';
+                        }
+                    } else if (v_store_in == 'sound_question') {
+                        var value = $('#item' + item_num + ' button.pressed').data('value');
+                        if (value != 'Clear') {
+                            boxClass = 'red';
+                            correctSolutionValue = 'Clear';
+                        }
+                    } else if (v_store_in == 'audience_engaged_question') {
+                        var value = $('#item' + item_num + ' button.pressed').data('value');
+                        if (value != 'Engaged') {
+                            boxClass = 'red';
+                            correctSolutionValue = 'Engaged';
+                        }
+                    } else if (v_store_in == 'performance_confident_question') {
+                        var value = $('#item' + item_num + ' button.pressed').data('value');
+                        if (value != 'Confident') {
+                            boxClass = 'red';
+                            correctSolutionValue = 'Confident';
+                        }
+                    } else if (v_store_in == 'vowel_project_question') {
+                        var value = $('#item' + item_num + ' button.pressed').data('value');
+                        if (value != 'Project') {
+                            boxClass = 'red';
+                            correctSolutionValue = 'Project';
+                        }
+                    }
+
+                    console_log('boxClass=' + boxClass);
+                    if (boxClass == 'green') {
+                        $('.box').addClass('highlight');
+                    } else if (boxClass == 'red') {
+                        $('.box').addClass('red-alerts');
+                        $('#correct-solution-value').html(correctSolutionValue);
+                    }
+                } else {
+                    //console.log("hasn't disbledbtn1 class ");
+                }
+            });
+
+            //UPDATING PROGRESS BAR WHEN CONTINUE BUTTON CLICKED
+            $("#cont").on('click', function(e) {
+                var item_num = $('.item:visible').data('item_num');
+                var $item = $('#item' + item_num);
+
+                $("#main-remove-class").removeClass("highlight");
+
+                //Store values of quiz___start___{____
+                var v_store_in = $item.data('v_store_in');
+                if (v_store_in == 'initial_experience_quotient') {
+                    quiz.initial_experience_quotient = $('#item' + item_num + ' button.pressed').data('value');
+                    quiz.initial_experience_value = getInitialExpValFromKey(quiz.initial_experience_quotient);
+                } else if (v_store_in == 'gender') {
+                    quiz.gender = $('#item' + item_num + ' button.pressed').data('value');
+                } else if (v_store_in == 'initial_voicegoals') {
+                    quiz.initial_voicegoals = []; //reset selected list
+                    quiz.initial_voicegoals_keys = []; //reset selected list
+                    $('#item' + item_num + ' button.pressed').each(function(i, pressedBtn) {
+                        var $objOfPressedBtn = $(pressedBtn);
+                        quiz.initial_voicegoals.push($objOfPressedBtn.text());
+                        quiz.initial_voicegoals_keys.push($objOfPressedBtn.data('option'));
+                    });
+
+                    if (quiz.initial_voicegoals.length == 1) {
+                        quiz.initial_voicegoals_mostimportant = quiz.initial_voicegoals[0];
+                        quiz.initial_voicegoals_mostimportant_key = quiz.initial_voicegoals_keys[0];
+                    }
+                } else if (v_store_in == 'initial_voicegoals_mostimportant') {
+                    $('#item' + item_num + ' button.pressed').each(function(i, pressedBtn) {
+                        var $objOfPressedBtn = $(pressedBtn);
+                        quiz.initial_voicegoals_mostimportant = $objOfPressedBtn.text();
+                        quiz.initial_voicegoals_mostimportant_key = $objOfPressedBtn.data('option');
+                    });
+                } else if (v_store_in == 'initial_performancegoals') {
+                    quiz.initial_performancegoals = []; //reset selected list
+                    quiz.initial_performancegoals_keys = [];
+                    $('#item' + item_num + ' button.pressed').each(function(i, pressedBtn) {
+                        var $objOfPressedBtn = $(pressedBtn);
+                        quiz.initial_performancegoals.push($objOfPressedBtn.text());
+                        quiz.initial_performancegoals_keys.push($objOfPressedBtn.data('option'));
+                    });
+
+                    if (quiz.initial_performancegoals.length == 1) {
+                        quiz.initial_performancegoals_mostimportant = quiz.initial_performancegoals[0];
+                        quiz.initial_performancegoals_mostimportant_key = quiz.initial_performancegoals_keys[0];
+                    }
+                } else if (v_store_in == 'initial_performancegoals_mostimportant') {
+
+                    $('#item' + item_num + ' button.pressed').each(function(i, pressedBtn) {
+                        var $objOfPressedBtn = $(pressedBtn);
+                        quiz.initial_performancegoals_mostimportant = $objOfPressedBtn.text();
+                        quiz.initial_performancegoals_mostimportant_key = $objOfPressedBtn.data('option');
+                    });
+                } else if (v_store_in == 'initial_pitchtest_ok') {
+                    quiz.initial_pitchtest_ok = $('#item' + item_num + ' button.pressed').data('value');
+                    if (quiz.initial_pitchtest_ok == 'no') {
+                        item_num++; //skip next item div of pitch test
+                        skipStep(item_num + 1, item_num, true);
+                    }
+                } else if (v_store_in == 'initial_traininggoals') {
+                    quiz.initial_traininggoals = []; //reset selected list
+                    quiz.initial_traininggoals_keys = [];
+                    $('#item' + item_num + ' button.pressed').each(function(i, pressedBtn) {
+                        var $objOfPressedBtn = $(pressedBtn);
+                        quiz.initial_traininggoals.push($objOfPressedBtn.text());
+                        quiz.initial_traininggoals_keys.push($objOfPressedBtn.data('option'));
+                    });
+
+                    if (quiz.initial_traininggoals.length == 1) {
+                        quiz.initial_traininggoals_mostimportant = quiz.initial_traininggoals[0];
+                        quiz.initial_traininggoals_mostimportant_key = quiz.initial_traininggoals_keys[0];
+                    }
+                } else if (v_store_in == 'initial_traininggoals_mostimportant') {
+
+                    $('#item' + item_num + ' button.pressed').each(function(i, pressedBtn) {
+                        var $objOfPressedBtn = $(pressedBtn);
+                        quiz.initial_traininggoals_mostimportant = $objOfPressedBtn.text();
+                        quiz.initial_traininggoals_mostimportant_key = $objOfPressedBtn.data('option');
+                    });
+                } else if (v_store_in == 'important_to_practice_vocal_training_1') {
+                    quiz.important_to_practice_vocal_training_1 = $('#item' + item_num + ' button.pressed').data('value');
+                } else if (v_store_in == 'important_to_practice_vocal_training_2') {
+                    quiz.important_to_practice_vocal_training_2 = $('#item' + item_num + ' button.pressed').data('value');
+                } else if (v_store_in == 'tongue_question') {
+                    quiz.tongue_question = $('#item' + item_num + ' button.pressed').data('value');
+                } else if (v_store_in == 'sound_question') {
+                    quiz.sound_question = $('#item' + item_num + ' button.pressed').data('value');
+                } else if (v_store_in == 'audience_engaged_question') {
+                    quiz.audience_engaged_question = $('#item' + item_num + ' button.pressed').data('value');
+                } else if (v_store_in == 'performance_confident_question') {
+                    quiz.performance_confident_question = $('#item' + item_num + ' button.pressed').data('value');
+                } else if (v_store_in == 'vowel_project_question') {
+                    quiz.vowel_project_question = $('#item' + item_num + ' button.pressed').data('value');
+                }
+
+                // console_log(item_num, quiz);//only current_question gonna set after console
+                //Store values of quiz___start___}____
+
+                setProgressbar(item_num + 1);
+                quiz.current_question = item_num;
+                if ((item_num + 1) > toValue) {
+                    stopPropagationOnCont(e);
+                    storeQuizAnsers();
+                    return;
+                }
+
+                removeHighlightedClasses();
+
+                var skipAStep = false;
+                if (
+                    (v_store_in == 'initial_voicegoals' && quiz.initial_voicegoals.length == 1) ||
+                    (v_store_in == 'initial_performancegoals' && quiz.initial_performancegoals.length == 1) ||
+                    (v_store_in == 'initial_traininggoals' && quiz.initial_traininggoals.length == 1)
+                ) {
+                    item_num++; //skip 1 step
+
+                    if ((item_num + 1) > toValue) {
+                        stopPropagationOnCont(e);
+                        storeQuizAnsers()
+                        return;
+                    } else {
+                        skipAStep = true;
+                    }
+                }
+
+                var next_item_num = (item_num + 1);
+
+                //is step just before the pitch test and skippt is 1
+                if (skippt == 1 &&
+                    ((skipAStep == true && v_store_in == 'initial_performancegoals') ||
+                        v_store_in == 'initial_performancegoals_mostimportant'
+                    )
+                ) {
+                    next_item_num = 9; //step next to the pitch test
+                    skipAStep = true;
+                }
+
+
+                if (skipAStep == true) {
+                    skipStep(next_item_num, item_num, true);
+                    setProgressbar(next_item_num);
+                }
+
+                //store state in database a/c to session id
+                storeQuizAnsersWithoutMsgs();
+
+                workBeforeShowingItem(next_item_num);
+                tracEvent(next_item_num); //on new screen
+            });
+
+
+            //DECREASING PROGRESS BAR WHEN GO BACK BUTTON CLICKED
+            $("#back").button().click(function(e) {
+                var item_num = $('.item:visible').data('item_num');
+                var $item = $('#item' + item_num);
+                var v_store_in = $item.data('v_store_in');
+                var comming_prev_item = item_num - 1; //for going back we need to minus 1 from current
+                //when we are next of pitch test and skippt is then jump two back from current item
+                if (v_store_in == "important_to_practice_vocal_training_1" && skippt == 1) {
+                    comming_prev_item = item_num - 2; //1 for pitch test and 1 for ask has mic for pitch test
+                }
+
+                //breaking point for going back
+                var firstToStopOn = 0;
+                if (skipvid == 1) {
+                    firstToStopOn = 1;
+                }
+
+                if (comming_prev_item < firstToStopOn) {
+                    stopPropagationOnCont(e);
+                    return;
+                }
+
+                setProgressbar(comming_prev_item);
+
+                //update current question number
+                quiz.current_question = comming_prev_item;
+
+                if (comming_prev_item != (item_num - 1)) { //if need to jum steps
+                    skipStep(comming_prev_item, item_num, true);
+                }
+
+            });
+
+
+
+
+            //when click on any option of quiz1 type
+            $(document)
+                .on('change', '.quiz1-layout .check-box-quiz', function(e) {
+                    //unselect previouse selected ticks
+                    $('.check-box-quiz').not(this).prop('checked', false);
+                    $(".disbledbtn1").click();
+
+                    // console_log( $(e.target).text(), $(e.target).prop('checked') );
+                    // if( $(e.target).prop('checked') ){}
+                });
+
+            // when click on any option of quiz2 type
+            $(document)
+                .on('click', '.quiz2-layout .btn', function(e) {
+                    whenClickOnAnyOption(e, 'quiz2-layout');
+                });
+
+
+            // when click on any option of quiz3 type
+            $(document)
+                .on('click', '.quiz3-layout .btn', function(e) {
+                    whenClickOnAnyOption(e, 'quiz3-layout');
+                });
+        });
+    </script>
+    <script src="https://dev2.academyofvoice.com/template_file/js/jquery.noty.packaged.min.js" async></script>
+    <link rel="stylesheet" type="text/css" href="https://dev2.academyofvoice.com/template_file/css/bootstrap-dialog.min.css" />
+
+    <script>
+        function notyMessage(message, type, params) {
+            var defaultParams = {
+                text: message,
+                theme: 'relax',
+                type: type,
+                layout: 'topRight',
+                timeout: 5000,
+                animation: {
+                    open: {
+                        height: 'toggle'
+                    },
+                    close: {
+                        height: 'toggle'
+                    },
+                    easing: 'swing',
+                    speed: 500 // opening & closing animation speed
+                }
+            };
+
+            return noty($.extend(defaultParams, params));
+        }
+    </script>
+    <script>
+        function showLoader() {
+            //document.getElementById("overlay").style.display = "block";
+            $("#overlay").show();
+        }
+
+        function hideLoader() {
+            //  document.getElementById("overlay").style.display = "none";
+            $("#overlay").hide();
+        }
+    </script>
+
+    <div id="overlay" style="    z-index: 99999;">
+        <i class="fa fa-spinner fa-spin align-center" style="font-size:100px"></i>
+    </div>
+    <style>
+        .fa-spin {
+            -webkit-animation: fa-spin 2s infinite linear;
+            animation: fa-spin 2s infinite linear;
+        }
+        
+        .fa {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        #overlay {
+            position: fixed;
+            display: none;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            cursor: pointer;
+            text-align: center;
+            padding-top: 50vh;
+        }
+    </style>
+    <style type="text/css">
+        .CustomModal {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 999999;
+            /*display: none;*/
+            overflow: hidden;
+            -webkit-overflow-scrolling: touch;
+            outline: 0;
+            background: #00000063;
+        }
+        
+        .modal-inner {
+            position: relative;
+            border: 1px solid #e9e9e9;
+            padding: 20px;
+            margin: -85px auto;
+            top: 50%;
+            background: #ffff;
+            max-width: 300px;
+            display: block;
+            text-align: center;
+            box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+            border-radius: 4px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .CustomModal:before {
+            content: " ";
+            background: #000;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #dots1Img {
+            width: 25px;
+            position: absolute;
+            top: 22px;
+        }
+    </style>
+    <div class="CustomModal" id="msgDiv1" style="display: none;">
+        <div class="modal-inner" id="msgDiv1Body">
+            Building your voice lessons
+            <img src="https://dev2.academyofvoice.com/template_file/public_image/dots.gif" id="dots1Img">
+        </div>
+    </div>
+
+    <!-- ALL JS FILE -->
+    <script type="text/javascript" src="https://dev2.academyofvoice.com/template_file/js/fc4a-inner-js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="https://dev2.academyofvoice.com/template_file/js/fc4a-inner-js/jquery-ui.js"></script>
+    <script src="https://dev2.academyofvoice.com/template_file/js/fc4a-inner-js/bootstrap.min.js"></script>
+</body>
+
+</html>
